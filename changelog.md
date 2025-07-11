@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+- Fixed name clash with default aseprite PICO-8 palette
+- Added hyphen to release name (`pico-8-palette`) as to match other ids
+- Fixed colour order on full palette so the default colours are in one column
+and the alternates in another
+
 ## 0.1.0
 - Added standard pico 8 palette
 - Added alternate pico 8 palette

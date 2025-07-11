@@ -2,7 +2,7 @@
     "name": "pico-8-palette",
     "displayName": "PICO-8 Palette",
     "description": "Palette from PICO-8 created by zep",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": { "name": "Fran", "url": "https://github.com/churris-x" },
     "license": "MIT",
     "categories": [

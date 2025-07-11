@@ -6,7 +6,6 @@ Go to latest release and download the extension file
 
 ## Todo
 - [ ] Figure out how to sign the release with a private key?
-- [ ] Fix full palette order
 
 ## License & Acknowledgements
 
