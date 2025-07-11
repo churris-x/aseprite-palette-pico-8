@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0
+- Remove default PICO-8 palette
+- Change extension ID name
+- Change palette names to match existing default
+
 ## 0.1.1
 - Fixed name clash with default aseprite PICO-8 palette
 - Added hyphen to release name (`pico-8-palette`) as to match other ids
