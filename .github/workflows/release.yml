@@ -38,8 +38,8 @@ jobs:
         run: |
           curl -L "https://github.com/${{ github.repository }}/archive/refs/tags/${{ github.ref_name }}.zip" -o source.zip
       - name: Create extension
-        run: mv source.zip pico-8-palette.aseprite-extension
+        run: mv source.zip pico-8-palettes.aseprite-extension
       - name: Upload extension
         run: |
-          gh release upload ${{ github.ref_name }} ./pico-8-palette.aseprite-extension
+          gh release upload ${{ github.ref_name }} ./pico-8-palettes.aseprite-extension
 
