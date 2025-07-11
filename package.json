@@ -12,7 +12,7 @@
         "palettes": [
             { "id": "pico-8-palette", "path": "./pico-8.gpl" },
             { "id": "pico-8-palette-alternate", "path": "./pico-8-alt.gpl" },
-            { "id": "pico-8-palette-full", "path": "./pico-8-full.gpl" },
+            { "id": "pico-8-palette-full", "path": "./pico-8-full.gpl" }
         ]
     }
 }
