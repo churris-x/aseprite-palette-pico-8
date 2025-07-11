@@ -8,8 +8,8 @@
     "categories": ["Palettes"],
     "contributes": {
         "palettes": [
-            { "id": "PICO-8 Full", "path": "./pico-8-full.gpl" }
-            { "id": "PICO-8 Alternate", "path": "./pico-8-alt.gpl" },
+            { "id": "PICO-8 Full", "path": "./pico-8-full.gpl" },
+            { "id": "PICO-8 Alternate", "path": "./pico-8-alt.gpl" }
         ]
     }
 }
