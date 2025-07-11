@@ -1,0 +1,50 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+    workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  # If version is increasing, create github release
+  create_release:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Compare Version
+        run: |
+          CURRENT=v$(jq -r '.version' package.json)
+          LATEST=$(git tag | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+' | tail -1)
+          if [[ "$CURRENT" < "$LATEST" ]]; then
+            echo "ERROR: current pacakge version $CURRENT is lower than latest version $LATEST"
+            exit 1
+          fi
+          echo "Version $CURRENT is >= to latest $LATEST, continuing to build"
+      - name: Githu release
+        run: |
+          VERSION=$(jq -r '.version' package.json)
+          NOTES=$(git log -1 --format='## Changes:%n%b')
+          gh release create "v$VERSION" --notes "$NOTES"
+
+  # Generate .aseprite-extension
+  generate_aseprite_extension:
+    needs: check_version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download source zip
+        run: |
+          curl -L "https://github.com/${{ github.repository }}/archive/refs/tags/${{ github.ref_name }}.zip" -o source.zip
+      - name: Create extension
+        run: mv source.zip source.aseprite-extension
+      - name: Upload extension
+        run: |
+          gh release upload ${{ github.ref_name }} ./source.xpi
