@@ -29,19 +29,11 @@ jobs:
             exit 1
           fi
           echo "Version $CURRENT is >= to latest $LATEST, continuing to build"
-      - name: Githu release
+      - name: Github release
         run: |
           VERSION=$(jq -r '.version' package.json)
           NOTES=$(git log -1 --format='## Changes:%n%b')
           gh release create "v$VERSION" --notes "$NOTES"
-
-  # Generate .aseprite-extension
-  generate_aseprite_extension:
-    needs: create_release
-    runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    steps:
       - name: Download source zip
         run: |
           curl -L "https://github.com/${{ github.repository }}/archive/refs/tags/${{ github.ref_name }}.zip" -o source.zip
@@ -50,3 +42,4 @@ jobs:
       - name: Upload extension
         run: |
           gh release upload ${{ github.ref_name }} ./pico8-palette.aseprite-extension
+
