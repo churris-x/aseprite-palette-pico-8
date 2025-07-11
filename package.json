@@ -1,18 +1,15 @@
 {
     "name": "pico-8-palette",
     "displayName": "PICO-8 Palette",
-    "description": "Palette from PICO-8 created by zep",
+    "description": "Full palette from PICO-8, created by zep",
     "version": "0.1.1",
     "author": { "name": "Fran", "url": "https://github.com/churris-x" },
     "license": "MIT",
-    "categories": [
-        "Palettes"
-    ],
+    "categories": ["Palettes"],
     "contributes": {
         "palettes": [
-            { "id": "pico-8-palette", "path": "./pico-8.gpl" },
-            { "id": "pico-8-palette-alternate", "path": "./pico-8-alt.gpl" },
-            { "id": "pico-8-palette-full", "path": "./pico-8-full.gpl" }
+            { "id": "PICO-8 Alternate", "path": "./pico-8-alt.gpl" },
+            { "id": "PICO-8 Full", "path": "./pico-8-full.gpl" }
         ]
     }
 }
