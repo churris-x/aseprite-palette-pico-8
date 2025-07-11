@@ -37,7 +37,7 @@ jobs:
 
   # Generate .aseprite-extension
   generate_aseprite_extension:
-    needs: check_version
+    needs: create_release
     runs-on: ubuntu-latest
     steps:
       - name: Download source zip
