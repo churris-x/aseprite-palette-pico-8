@@ -4,7 +4,11 @@ My own copy of the PICO-8 palette for the Aseprite pixel editor
 
 Go to latest release and download the extension file
 
-# License & Acknowledgements
+## Todo
+- [ ] Figure out how to sign the release with a private key?
+- [ ] Fix full palette order
+
+## License & Acknowledgements
 
 Everything is under the [MIT License][mit].
 
