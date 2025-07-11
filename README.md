@@ -14,7 +14,6 @@ My own copy of the PICO-8 palette for the Aseprite pixel editor.
 
 ## Todo
 - [ ] Figure out how to sign the release with a private key?
-- [ ] Remove default pico 8 since it's shipped with Aseprite?
 
 ## License & Acknowledgements
 
