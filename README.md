@@ -1,4 +1,4 @@
-# PICO 8 color palette for Aseprite
+# PICO-8 Colour Palette for Aseprite
 
 ![Cover image of palette](https://github.com/user-attachments/assets/e3fde247-4615-443d-a6a7-c3ef4392307c)
 
