@@ -1,6 +1,6 @@
 {
-    "name": "pico-8-palette",
-    "displayName": "PICO-8 Palette",
+    "name": "pico-8-palettes",
+    "displayName": "PICO-8 Full Palette",
     "description": "Full palette from PICO-8, created by zep",
     "version": "0.1.1",
     "author": { "name": "Fran", "url": "https://github.com/churris-x" },
@@ -8,8 +8,8 @@
     "categories": ["Palettes"],
     "contributes": {
         "palettes": [
-            { "id": "PICO-8 Alternate", "path": "./pico-8-alt.gpl" },
             { "id": "PICO-8 Full", "path": "./pico-8-full.gpl" }
+            { "id": "PICO-8 Alternate", "path": "./pico-8-alt.gpl" },
         ]
     }
 }
