@@ -1,0 +1,5 @@
+.editorconfig export-ignore
+.github/ export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+pico-8.gpl export-ignore
