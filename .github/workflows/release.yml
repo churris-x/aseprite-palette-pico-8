@@ -29,17 +29,12 @@ jobs:
             exit 1
           fi
           echo "Version $CURRENT is >= to latest $LATEST, continuing to build"
+      - name: Create extension file
+        run: git archive @ --format zip > pico-8-palettes.aseprite-extension
       - name: Github release
         run: |
           VERSION=$(jq -r '.version' package.json)
           NOTES=$(git log -1 --format='## Changes:%n%b')
-          gh release create "v$VERSION" --notes "$NOTES"
-      - name: Download source zip
-        run: |
-          curl -L "https://github.com/${{ github.repository }}/archive/refs/tags/${{ github.ref_name }}.zip" -o source.zip
-      - name: Create extension
-        run: mv source.zip pico-8-palettes.aseprite-extension
-      - name: Upload extension
-        run: |
-          gh release upload ${{ github.ref_name }} ./pico-8-palettes.aseprite-extension
+          gh release create "v$VERSION" --notes "$NOTES" pico-8-palettes.aseprite-extension
+
 
