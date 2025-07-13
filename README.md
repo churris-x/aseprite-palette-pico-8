@@ -12,8 +12,9 @@ My own copy of the PICO-8 palette for the Aseprite pixel editor.
 4. Search or scroll untill you find the pico-8 palettes
 5. Have fun!
 
-## Todo
-- [ ] Figure out how to sign the release with a private key?
+## Build
+1. Clone repo
+2. Run `git archive @ --format zip > pico-8-palettes.aseprite-extension`
 
 ## License & Acknowledgements
 
