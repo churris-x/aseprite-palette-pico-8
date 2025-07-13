@@ -1,6 +1,6 @@
 # PICO-8 Colour Palette for Aseprite
 
-![Cover image of palette](https://github.com/user-attachments/assets/e3fde247-4615-443d-a6a7-c3ef4392307c)
+![Cover image of palette](.github/readme-cover.png)
 
 My own copy of the PICO-8 palette for the Aseprite pixel editor.
 
