@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+- Change extension name so it appears underneath default pico 8 one
+- Improve release workflow by using git-archive to generate the
+extension file
+
 ## 1.0.0
 - Remove default PICO-8 palette
 - Change extension ID name
